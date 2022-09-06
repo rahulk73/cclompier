@@ -1,3 +1,5 @@
+A complete compiler for a slightly different falvour of C.
+
 # Project Components #
 
 1. [Parser](desc/part1/)
