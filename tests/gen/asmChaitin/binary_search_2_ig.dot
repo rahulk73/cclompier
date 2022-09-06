@@ -1,0 +1,222 @@
+strict graph G {
+Node0[label="v90 : 0"]
+Node1[label="v92 : 1"]
+Node2[label="v91 : 0"]
+Node3[label="v94 : 1"]
+Node4[label="v93 : 0"]
+Node5[label="v96 : 0"]
+Node6[label="v95 : 0"]
+Node7[label="v97 : 0"]
+Node8[label="v12 : 1"]
+Node9[label="v99 : 0"]
+Node10[label="v11 : 0"]
+Node11[label="v14 : 2"]
+Node12[label="v13 : 0"]
+Node13[label="v16 : 1"]
+Node14[label="v15 : 0"]
+Node15[label="v18 : 2"]
+Node16[label="v17 : 0"]
+Node17[label="v19 : 0"]
+Node18[label="v21 : 1"]
+Node19[label="v20 : 0"]
+Node20[label="v23 : 0"]
+Node21[label="v22 : 0"]
+Node22[label="v24 : 0"]
+Node23[label="v29 : 1"]
+Node24[label="v28 : 0"]
+Node25[label="v30 : 0"]
+Node26[label="v32 : 0"]
+Node27[label="v31 : 3"]
+Node28[label="v34 : 0"]
+Node29[label="v33 : 2"]
+Node30[label="v36 : 1"]
+Node31[label="v35 : 1"]
+Node32[label="v38 : 0"]
+Node33[label="v37 : 0"]
+Node34[label="v39 : 0"]
+Node35[label="v41 : 2"]
+Node36[label="v40 : 1"]
+Node37[label="v43 : 1"]
+Node38[label="v42 : 0"]
+Node39[label="v45 : 0"]
+Node40[label="v44 : 0"]
+Node41[label="v46 : 0"]
+Node42[label="v49 : 2"]
+Node43[label="v0 : 0"]
+Node44[label="v1 : 1"]
+Node45[label="v2 : 0"]
+Node46[label="v3 : 0"]
+Node47[label="v4 : 1"]
+Node48[label="v5 : 0"]
+Node49[label="v6 : 1"]
+Node50[label="v7 : 0"]
+Node51[label="v103 : 0"]
+Node52[label="v104 : 2"]
+Node53[label="v101 : 0"]
+Node54[label="v102 : 1"]
+Node55[label="v100 : 0"]
+Node56[label="v50 : 1"]
+Node57[label="v52 : 0"]
+Node58[label="v51 : 0"]
+Node59[label="v54 : 0"]
+Node60[label="v56 : 0"]
+Node61[label="v55 : 3"]
+Node62[label="v58 : 2"]
+Node63[label="v57 : 1"]
+Node64[label="v59 : 0"]
+Node65[label="v61 : 2"]
+Node66[label="v60 : 0"]
+Node67[label="v63 : 1"]
+Node68[label="v62 : 0"]
+Node69[label="v65 : 2"]
+Node70[label="v64 : 0"]
+Node71[label="v67 : 1"]
+Node72[label="v66 : 0"]
+Node73[label="v69 : 0"]
+Node74[label="v68 : 0"]
+Node75[label="v70 : 1"]
+Node76[label="v72 : 1"]
+Node77[label="v71 : 0"]
+Node78[label="v74 : 1"]
+Node79[label="v73 : 0"]
+Node80[label="v76 : 0"]
+Node81[label="v118 : 1"]
+Node82[label="v119 : 0"]
+Node83[label="v75 : 0"]
+Node84[label="v116 : 1"]
+Node85[label="v78 : 1"]
+Node86[label="v77 : 0"]
+Node87[label="v117 : 0"]
+Node88[label="v79 : 2"]
+Node89[label="v114 : 1"]
+Node90[label="v115 : 0"]
+Node91[label="v112 : 0"]
+Node92[label="v113 : 0"]
+Node93[label="v110 : 1"]
+Node94[label="v111 : 0"]
+Node95[label="v81 : 1"]
+Node96[label="v80 : 0"]
+Node97[label="v83 : 0"]
+Node98[label="v82 : 0"]
+Node99[label="v85 : 0"]
+Node100[label="v109 : 0"]
+Node101[label="v84 : 0"]
+Node102[label="v107 : 0"]
+Node103[label="v87 : 0"]
+Node104[label="v86 : 2"]
+Node105[label="v108 : 0"]
+Node106[label="v89 : 1"]
+Node107[label="v105 : 0"]
+Node108[label="v106 : 0"]
+Node109[label="v88 : 0"]
+Node0-- {};
+Node1-- {Node4};
+Node2-- {};
+Node3-- {Node5, Node6, Node7, Node9, Node55};
+Node4-- {Node1};
+Node5-- {Node3};
+Node6-- {Node3};
+Node7-- {Node3};
+Node8-- {Node12};
+Node9-- {Node3};
+Node10-- {};
+Node11-- {Node13, Node14, Node16};
+Node12-- {Node8};
+Node13-- {Node11, Node16};
+Node14-- {Node11};
+Node15-- {Node18, Node19, Node17};
+Node16-- {Node11, Node13};
+Node17-- {Node15};
+Node18-- {Node19, Node15};
+Node19-- {Node18, Node15};
+Node20-- {};
+Node21-- {};
+Node22-- {};
+Node23-- {Node25};
+Node24-- {};
+Node25-- {Node23};
+Node26-- {Node27};
+Node27-- {Node26, Node28, Node29, Node30, Node31, Node32, Node33};
+Node28-- {Node27, Node29};
+Node29-- {Node27, Node28, Node30, Node31, Node32, Node33};
+Node30-- {Node27, Node29, Node33};
+Node31-- {Node27, Node29, Node32};
+Node32-- {Node27, Node29, Node31};
+Node33-- {Node27, Node29, Node30};
+Node34-- {};
+Node35-- {Node37, Node38, Node40};
+Node36-- {Node39};
+Node37-- {Node35, Node38};
+Node38-- {Node35, Node37};
+Node39-- {Node36};
+Node40-- {Node35};
+Node41-- {};
+Node42-- {Node56, Node57, Node58};
+Node43-- {};
+Node44-- {Node45};
+Node45-- {Node44};
+Node46-- {};
+Node47-- {Node48};
+Node48-- {Node47};
+Node49-- {Node50};
+Node50-- {Node49};
+Node51-- {Node54};
+Node52-- {Node107, Node54};
+Node53-- {};
+Node54-- {Node107, Node51, Node52};
+Node55-- {Node3};
+Node56-- {Node58, Node42};
+Node57-- {Node42};
+Node58-- {Node56, Node42};
+Node59-- {};
+Node60-- {Node61};
+Node61-- {Node66, Node60, Node62, Node63, Node64};
+Node62-- {Node61, Node63, Node64};
+Node63-- {Node66, Node61, Node62, Node64};
+Node64-- {Node61, Node62, Node63};
+Node65-- {Node67, Node68, Node70};
+Node66-- {Node61, Node63};
+Node67-- {Node65, Node70};
+Node68-- {Node65};
+Node69-- {Node71, Node72, Node74};
+Node70-- {Node65, Node67};
+Node71-- {Node69, Node74};
+Node72-- {Node69};
+Node73-- {};
+Node74-- {Node69, Node71};
+Node75-- {Node77};
+Node76-- {Node79};
+Node77-- {Node75};
+Node78-- {Node83};
+Node79-- {Node76};
+Node80-- {};
+Node81-- {Node87};
+Node82-- {};
+Node83-- {Node78};
+Node84-- {Node90};
+Node85-- {Node86};
+Node86-- {Node85};
+Node87-- {Node81};
+Node88-- {Node97, Node98, Node99, Node101, Node95, Node96};
+Node89-- {Node92};
+Node90-- {Node84};
+Node91-- {};
+Node92-- {Node89};
+Node93-- {Node94};
+Node94-- {Node93};
+Node95-- {Node88, Node96};
+Node96-- {Node88, Node95};
+Node97-- {Node88};
+Node98-- {Node88};
+Node99-- {Node88};
+Node100-- {};
+Node101-- {Node88};
+Node102-- {};
+Node103-- {Node104};
+Node104-- {Node103, Node106, Node109};
+Node105-- {};
+Node106-- {Node104, Node109};
+Node107-- {Node52, Node54};
+Node108-- {};
+Node109-- {Node104, Node106};
+}

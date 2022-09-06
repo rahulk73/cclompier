@@ -1,0 +1,2 @@
+#include "Stddd" #include
+"I am a \"string\""

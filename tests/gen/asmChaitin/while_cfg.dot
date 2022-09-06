@@ -1,0 +1,144 @@
+digraph D {
+Node0[label="lw v1,4($fp)"]
+Node1[label="sw v4,0($fp)"]
+Node2[label="syscall"]
+Node3[label="addi v16,$fp,-12"]
+Node4[label="addi $sp,$fp,0"]
+Node5[label="lw $fp,-4($sp)"]
+Node6[label="li v3,1"]
+Node7[label="li $v0,1"]
+Node8[label="sw $fp,-4($sp)"]
+Node9[label="addi $fp,$sp,0"]
+Node10[label="jr $ra"]
+Node11[label="lw v20,-16($fp)"]
+Node12[label="addi $sp,$fp,0"]
+Node13[label="addi v13,$fp,-16"]
+Node14[label="sw v17,0(v16)"]
+Node15[label="jal main"]
+Node16[label="pushRegisters"]
+Node17[label="sw v14,0($sp)"]
+Node18[label="lw v14,-12($fp)"]
+Node19[label="add $a0,v20,$zero"]
+Node20[label="j label_5_while"]
+Node21[label="beq v10,$zero,label_6_while_end"]
+Node22[label="li $v0,10"]
+Node23[label="popRegisters"]
+Node24[label="slt v10,v11,v12"]
+Node25[label="addi $sp,$sp,-4"]
+Node26[label="jal iseven"]
+Node27[label="lw $ra,-8($sp)"]
+Node28[label="popRegisters"]
+Node29[label="jr $ra"]
+Node30[label="addi $sp,$sp,-8"]
+Node31[label="addi $fp,$sp,0"]
+Node32[label="sw v15,0(v13)"]
+Node33[label="lw $ra,-8($sp)"]
+Node34[label="li v11,0"]
+Node35[label="addi $sp,$fp,0"]
+Node36[label="li v9,0"]
+Node37[label="li v4,0"]
+Node38[label="jr $ra"]
+Node39[label="sw v3,0($fp)"]
+Node40[label="lw $ra,-8($sp)"]
+Node41[label="li v6,10"]
+Node42[label="popRegisters"]
+Node43[label="mfhi v0"]
+Node44[label="li v19,1"]
+Node45[label="lw v15,0($sp)"]
+Node46[label="div v1,v2"]
+Node47[label="lw v12,-12($fp)"]
+Node48[label="popRegisters"]
+Node49[label="pushRegisters"]
+Node50[label="addi $sp,$sp,8"]
+Node51[label="lw $fp,-4($sp)"]
+Node52[label="sw $ra,-8($sp)"]
+Node53[label="lw $fp,-4($sp)"]
+Node54[label="sub v17,v18,v19"]
+Node55[label="sw $fp,-4($sp)"]
+Node56[label="jr $ra"]
+Node57[label="sw v6,0(v5)"]
+Node58[label="addi $sp,$fp,0"]
+Node59[label="j label_2_if_end"]
+Node60[label="li v2,2"]
+Node61[label="lw v18,-12($fp)"]
+Node62[label="sw $ra,-8($sp)"]
+Node63[label="syscall"]
+Node64[label="lw $fp,-4($sp)"]
+Node65[label="addi v5,$fp,-12"]
+Node66[label="addi $sp,$sp,-4"]
+Node67[label="lw $ra,-8($sp)"]
+Node68[label="addi $sp,$sp,-16"]
+Node69[label="beq v0,$zero,label_1_else"]
+Node70[label="lw v8,-12($fp)"]
+Node0-> {Node60};
+Node1-> {Node23};
+Node2-> {};
+Node3-> {Node61};
+Node4-> {Node40};
+Node5-> {Node10};
+Node6-> {Node39};
+Node7-> {Node19};
+Node8-> {Node9};
+Node9-> {Node52};
+Node10-> {Node48};
+Node11-> {Node7};
+Node12-> {Node67};
+Node13-> {Node18};
+Node14-> {Node11};
+Node15-> {Node22};
+Node16-> {Node0};
+Node17-> {Node66};
+Node18-> {Node25};
+Node19-> {Node63};
+Node20-> {Node28, Node70};
+Node21-> {Node28, Node13};
+Node22-> {Node2};
+Node23-> {Node4};
+Node24-> {Node21};
+Node25-> {Node17};
+Node26-> {Node45};
+Node27-> {Node53};
+Node28-> {Node12};
+Node29-> {Node59};
+Node30-> {Node16};
+Node31-> {Node62};
+Node32-> {Node3};
+Node33-> {Node64};
+Node34-> {Node47};
+Node35-> {Node33};
+Node36-> {Node34};
+Node37-> {Node1};
+Node38-> {};
+Node39-> {Node42};
+Node40-> {Node5};
+Node41-> {Node57};
+Node42-> {Node58};
+Node43-> {Node69};
+Node44-> {Node54};
+Node45-> {Node50};
+Node46-> {Node43};
+Node47-> {Node24};
+Node48-> {Node35};
+Node49-> {Node65};
+Node50-> {Node32};
+Node51-> {Node56};
+Node52-> {Node68};
+Node53-> {Node29};
+Node54-> {Node14};
+Node55-> {Node31};
+Node56-> {};
+Node57-> {Node70};
+Node58-> {Node27};
+Node59-> {Node48, Node37};
+Node60-> {Node46};
+Node61-> {Node44};
+Node62-> {Node30};
+Node63-> {Node20};
+Node64-> {Node38};
+Node65-> {Node41};
+Node66-> {Node26};
+Node67-> {Node51};
+Node68-> {Node49};
+Node69-> {Node6, Node37};
+Node70-> {Node36};
+}

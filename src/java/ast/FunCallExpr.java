@@ -1,0 +1,20 @@
+package ast;
+
+import java.util.List;
+
+public class FunCallExpr extends Expr{
+
+    public final String fname;
+    public final List<Expr> args;
+    public FunDecl fd;
+    public VarDecl self_ref;
+
+    public FunCallExpr(String fname, List<Expr> args) {
+        this.fname = fname;
+        this.args = args;
+    }
+
+    public <T> T accept(ASTVisitor<T> v) {
+        return v.visitFunCallExpr(this);
+    }
+}

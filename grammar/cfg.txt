@@ -1,0 +1,124 @@
+# #  comment
+# () grouping
+# [] optional
+# *  zero or more
+# +  one or more
+# |  alternative
+
+
+program    ::= increp classdeclrep structdeclrep vardeclrep fundeclrep EOF
+
+include    ::= "#include" STRING_LITERAL
+
+increp     ::= include increp
+             | e
+
+structdecl ::= structtype structdeclTail                # structure declaration
+
+structdeclTail  ::= "{" (vardeclrep2)+ "}" ";"
+
+structdeclrep ::= structdecl structdeclrep
+                | e
+
+classdeclrep    ::= classdecl classdeclrep
+                  | e
+
+classdecl  ::= classtype classdeclTail
+
+classdeclTail   ::= ["extends" IDENT] "{" vardeclrep fundeclrep "}"
+
+
+vardecl    ::= type vardeclTail
+
+vardeclTail    ::= IDENT ";"                            # normal declaration, e.g. int a;
+              | IDENT "[" INT_LITERAL "]" ";"           # array declaration, e.g. int a[2];
+
+vardeclrep  ::= vardecl vardeclrep
+              | e
+
+vardeclrep2 ::= vardecl vardeclrep2
+              | vardecl
+
+fundecl    ::= type fundeclTail
+
+fundeclTail ::= IDENT "(" params ")" block              # function declaration
+
+fundeclrep  ::= fundecl fundeclrep
+              | e
+
+type       ::= ("int" | "char" | "void" | structtype | classtype) ptropt
+
+ptropt      ::= "*"
+              | e
+
+structtype ::= "struct" IDENT
+
+classtype ::= "class" IDENT
+
+params     ::= type IDENT arglist
+             | e
+
+arglist    ::= ("," type IDENT) arglist
+             | e
+
+paramscall    ::= exp arglistcall
+                | e
+
+arglistcall   ::= ("," exp) arglistcall
+                | e
+
+stmt       ::= block
+             | "while" "(" exp ")" stmt              # while loop
+             | "if" "(" exp ")" stmt elseopt         # if then else
+             | "return" expopt ";"                   # return
+             | exp "=" exp ";"                       # assignment
+             | exp ";"                               # expression statement, e.g. a function call
+
+stmtrep    ::= stmt stmtrep
+            | e
+
+elseopt    ::= "else" stmt
+             | e
+
+expoopt     ::= exp
+              | e
+
+block      ::= "{" vardeclrep stmtrep "}"
+
+exp         ::= level7 ("||" level7)*
+level7      ::= level6 ("&&" level6)*
+level6      ::= level5 (("==" | "!=") level5)*
+level5      ::= level4 (("<" | "<=" | ">" | ">=") level4)*
+level4      ::= level3 (("+" | "-") level3)*
+level3      ::= level2 (("*" | "/" | "%") level2)*
+level2      ::= ("-" | "+") level2
+              | typecast
+              | valueat
+              | addressof
+              | classInstance
+              | level1
+
+level1      ::= funcall exp'
+              | "(" exp ")" exp'
+              | (IDENT | INT_LITERAL) exp'
+              | CHAR_LITERAL exp'
+              | STRING_LITERAL exp'
+              | sizeof exp'
+
+exp'        ::= arrayaccess exp'
+              | fieldaccess exp'
+              | classfuncall exp'
+              | e
+
+binop        ::= ">" | "<" | ">=" | "<=" | "!=" | "==" | "+" | "-" | "/" | "*" | "%" | "||" | "&&"
+funcall      ::= IDENT "(" paramscall ")"         # function call
+arrayaccess  ::= "[" exp "]"                      # array access
+fieldaccess  ::= "." IDENT                        # structure/class field member access
+valueat      ::= "*" level2                          # Value at operator (pointer indirection)
+addressof    ::= "&" level2                          # Address-of operator
+sizeof       ::= "sizeof" "(" type ")"            # size of type
+typecast     ::= "(" type ")" level2                 # type casting
+classInstance::= "new" classtype "()"              # Part V - new class object instantiation
+classfuncall ::= "." funcall				  # Part V - class method call
+
+
